@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-bg relative text-white">
+    <slot />
+    <a
+      href="https://twitter.com/JeegsCreator"
+      class="lg:bg-yt-red/20 border-yt-red fixed bottom-0 right-0 rounded-tl-md border-l border-t bg-zinc-400 px-3 py-1 backdrop-blur sm:bg-yellow-400 md:bg-green-400"
+      >@JeegsCreator</a
+    >
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+</style>

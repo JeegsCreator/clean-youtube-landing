@@ -1,0 +1,29 @@
+---
+interface Props {
+  iconSrc: string;
+  imageSrc: string;
+  title: string;
+  description: string;
+}
+
+const { iconSrc, imageSrc, title, description } = Astro.props;
+---
+
+<article
+  class="border-muted bg-bg-muted w-full rounded-lg border p-5 pr-0 sm:max-w-[400px] md:max-w-[330px]"
+>
+  <div class="pr-5">
+    <header class="flex items-center gap-3">
+      <picture><img src={iconSrc} alt="Youtube Shorts Icon" /></picture>
+      <h3 class="text-2xl font-bold">
+        {title}
+      </h3>
+    </header>
+    <p class="text-muted mt-1">
+      {description}
+    </p>
+  </div>
+  <picture class="mt-6 block py-2">
+    <img src={imageSrc} alt="Screenshot of the feature" />
+  </picture>
+</article>

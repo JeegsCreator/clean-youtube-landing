@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: [string, string];
+  subtitle: [string, string, string];
+  href: string;
+  icon?: string;
+}
+
+const { title, href, subtitle, icon } = Astro.props;
+---
+
+<article class="my-[120px] block">
+  <h4 class="flex flex-col text-center text-2xl font-bold md:text-4xl">
+    <span>{title[0]}</span>
+    <span class="flex justify-center gap-2">
+      {title[1]}
+      {icon && <img src={icon} alt="heart icon" />}
+    </span>
+  </h4>
+  <p class="text-muted md:text-md mt-2 flex flex-col text-center">
+    <span>{subtitle[0]}</span>
+    <span
+      >{subtitle[1]}
+      <a href={href} class="underline" target="_blank">{subtitle[2]}</a>.
+    </span>
+  </p>
+</article>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<a
+  href="/"
+  type="button"
+  class="border-yt-red bg-yt-red/20 hover:bg-yt-red/30 rounded-md border-2 px-5 py-2 transition-colors"
+>
+  {text}
+</a>

@@ -1,0 +1,98 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Button from "@components/Button.astro";
+import BgDecoration from "@components/BgDecoration.astro";
+import Feature from "@components/Feature.astro";
+import Message from "@components/Message.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<Layout title="Clean Youtube | Elevate your YouTube experience">
+  <section
+    class="relative flex h-[90vh] flex-col items-center px-4 py-10 md:h-[80vh] lg:py-10"
+  >
+    <BgDecoration />
+    <div class="z-20 flex items-center gap-2 text-xl font-semibold">
+      <img src="/icon.svg" class="h-12" alt="Clean YouTube Logo" />
+      <h1>Clean YouTube</h1>
+    </div>
+    <article class="z-20 mt-[16vh] flex flex-col items-center gap-5 lg:my-auto">
+      <h2
+        class="flex flex-col items-center text-3xl font-bold sm:text-5xl md:text-6xl lg:text-7xl"
+      >
+        <span>Elevate your YouTube</span>
+        <div class="flex gap-1 md:gap-4">
+          <span>experience!</span>
+          <img
+            src="/icons/pointer.svg"
+            class="-translate-x-2 -translate-y-1 scale-50 sm:translate-x-0 sm:translate-y-0 sm:scale-75 md:translate-y-2 md:scale-100"
+            alt="Pointer icon"
+          />
+        </div>
+      </h2>
+      <p
+        class="text-muted text-md flex flex-col items-center text-center sm:px-[15%] md:text-lg"
+      >
+        Get rid of visual distractions and YouTube Shorts, make the design more
+        minimalist and enjoy YouTube
+      </p>
+      <Button text="Install Chrome extension" />
+    </article>
+  </section>
+
+  <div class="relative mt-20 flex flex-col items-center lg:mt-0">
+    <img
+      src="/bg-blur.svg"
+      alt="blured circle"
+      class="absolute -bottom-60 -z-10 -translate-y-10 scale-[2.5] opacity-80 md:-bottom-[calc((100vw-50px)/2)] md:scale-100 lg:-bottom-[calc((100vw-250px)/2)]"
+    />
+    <main class="md:px-auto w-full px-4">
+      <h2 class="text-center text-3xl font-bold lg:text-4xl">
+        What you'll get?
+      </h2>
+      <div
+        class="mt-8 flex w-full flex-col flex-wrap items-center gap-4 md:flex-row md:justify-center md:gap-6 lg:mt-12"
+      >
+        <Feature
+          iconSrc="/icons/shorts.svg"
+          title="Shorts-Free Feed"
+          description="Say goodbye to unintentional detours into YouTube Shorts."
+          imageSrc="/images/feat-shorts.webp"
+        />
+        <Feature
+          iconSrc="/icons/airplay.svg"
+          title="Quick Mini Player"
+          description="Achieve multitasking quickly with the always on top mini player."
+          imageSrc="/images/feat-pip.webp"
+        />
+        <Feature
+          iconSrc="/icons/box.svg"
+          title="Simplified Interface"
+          description="Enjoy a clutter-free YouTube unnecessary buttons and sections"
+          imageSrc="/images/feat-interface.webp"
+        />
+      </div>
+    </main>
+  </div>
+  <section class="px-4 lg:px-[200px]">
+    <Message
+      title={[
+        "For a better experience",
+        "Pay YouTube Premium or just use an ad blocker.",
+      ]}
+      subtitle={[
+        "I use YouTube Premium because it has other valuable features",
+        "but if you’ll use an ad blocker I’ll recommend",
+        "AdBlock",
+      ]}
+      href="https://chromewebstore.google.com/detail/adblock-el-mejor-bloquead/gighmmpiobklfepjocnamgkkbiglidom?hl=es&utm_source=clean_youtube&ref=clean_youtube"
+    />
+    <Message
+      title={["And If you have feedback", "I’d love to hear it."]}
+      subtitle={["", "Please", "share your feedback"]}
+      href="https://cleanyoutube.canny.io/feedback"
+      icon="/icons/heart.svg"
+    />
+  </section>
+  <Footer />
+</Layout>
