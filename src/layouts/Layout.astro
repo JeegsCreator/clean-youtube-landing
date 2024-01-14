@@ -22,11 +22,11 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-bg relative text-white">
+  <body class="relative overflow-x-hidden bg-bg text-white">
     <slot />
     <a
       href="https://twitter.com/JeegsCreator"
-      class="lg:bg-yt-red/20 border-yt-red fixed bottom-0 right-0 rounded-tl-md border-l border-t bg-zinc-400 px-3 py-1 backdrop-blur sm:bg-yellow-400 md:bg-green-400"
+      class="fixed bottom-0 right-0 rounded-tl-md border-l border-t border-yt-red bg-yt-red/20 px-3 py-1 backdrop-blur"
       >@JeegsCreator</a
     >
   </body>

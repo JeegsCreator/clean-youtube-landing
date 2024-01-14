@@ -31,7 +31,7 @@ import Footer from "@components/Footer.astro";
         </div>
       </h2>
       <p
-        class="text-muted text-md flex flex-col items-center text-center sm:px-[15%] md:text-lg"
+        class="text-md flex flex-col items-center text-center text-muted sm:px-[15%] md:text-lg"
       >
         Get rid of visual distractions and YouTube Shorts, make the design more
         minimalist and enjoy YouTube
@@ -40,12 +40,7 @@ import Footer from "@components/Footer.astro";
     </article>
   </section>
 
-  <div class="relative mt-20 flex flex-col items-center lg:mt-0">
-    <img
-      src="/bg-blur.svg"
-      alt="blured circle"
-      class="absolute -bottom-60 -z-10 -translate-y-10 scale-[2.5] opacity-80 md:-bottom-[calc((100vw-50px)/2)] md:scale-100 lg:-bottom-[calc((100vw-250px)/2)]"
-    />
+  <div class="relative mt-20 flex w-full flex-col items-center lg:mt-0">
     <main class="md:px-auto w-full px-4">
       <h2 class="text-center text-3xl font-bold lg:text-4xl">
         What you'll get?
@@ -73,6 +68,15 @@ import Footer from "@components/Footer.astro";
         />
       </div>
     </main>
+    <div
+      class="absolute -bottom-[50vw] -z-10 h-auto w-full max-w-[100vw] overflow-hidden blur-3xl"
+    >
+      <img
+        src="/bg-blur.svg"
+        alt="blured circle"
+        class="-translate-y-10 scale-[2.5] overflow-x-hidden opacity-80 md:-bottom-[calc((100vw-50px)/2)] md:scale-100 lg:-bottom-[calc((100vw-250px)/2)]"
+      />
+    </div>
   </div>
   <section class="px-4 lg:px-[200px]">
     <Message
