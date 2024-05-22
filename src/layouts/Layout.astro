@@ -1,4 +1,6 @@
 ---
+import Footer from "@components/Footer.astro";
+
 interface Props {
   title: string;
 }
@@ -28,6 +30,7 @@ const { title } = Astro.props;
   </head>
   <body class="relative overflow-x-hidden bg-bg text-white">
     <slot />
+    <Footer />
     <a
       href="https://twitter.com/JeegsCreator"
       class="fixed bottom-0 right-0 rounded-tl-md border-l border-t border-yt-red bg-yt-red/20 px-3 py-1 backdrop-blur"
